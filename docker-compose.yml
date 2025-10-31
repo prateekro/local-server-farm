@@ -1,0 +1,1455 @@
+version: '3.8'
+services:
+  server-1:
+    build: ./server
+    container_name: server-1
+    environment:
+    - SERVER_ID=server-1
+    - SERVER_PORT=8000
+    ports:
+    - 8001:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-2:
+    build: ./server
+    container_name: server-2
+    environment:
+    - SERVER_ID=server-2
+    - SERVER_PORT=8000
+    ports:
+    - 8002:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-3:
+    build: ./server
+    container_name: server-3
+    environment:
+    - SERVER_ID=server-3
+    - SERVER_PORT=8000
+    ports:
+    - 8003:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-4:
+    build: ./server
+    container_name: server-4
+    environment:
+    - SERVER_ID=server-4
+    - SERVER_PORT=8000
+    ports:
+    - 8004:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-5:
+    build: ./server
+    container_name: server-5
+    environment:
+    - SERVER_ID=server-5
+    - SERVER_PORT=8000
+    ports:
+    - 8005:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-6:
+    build: ./server
+    container_name: server-6
+    environment:
+    - SERVER_ID=server-6
+    - SERVER_PORT=8000
+    ports:
+    - 8006:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-7:
+    build: ./server
+    container_name: server-7
+    environment:
+    - SERVER_ID=server-7
+    - SERVER_PORT=8000
+    ports:
+    - 8007:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-8:
+    build: ./server
+    container_name: server-8
+    environment:
+    - SERVER_ID=server-8
+    - SERVER_PORT=8000
+    ports:
+    - 8008:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-9:
+    build: ./server
+    container_name: server-9
+    environment:
+    - SERVER_ID=server-9
+    - SERVER_PORT=8000
+    ports:
+    - 8009:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-10:
+    build: ./server
+    container_name: server-10
+    environment:
+    - SERVER_ID=server-10
+    - SERVER_PORT=8000
+    ports:
+    - 8010:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-11:
+    build: ./server
+    container_name: server-11
+    environment:
+    - SERVER_ID=server-11
+    - SERVER_PORT=8000
+    ports:
+    - 8011:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-12:
+    build: ./server
+    container_name: server-12
+    environment:
+    - SERVER_ID=server-12
+    - SERVER_PORT=8000
+    ports:
+    - 8012:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-13:
+    build: ./server
+    container_name: server-13
+    environment:
+    - SERVER_ID=server-13
+    - SERVER_PORT=8000
+    ports:
+    - 8013:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-14:
+    build: ./server
+    container_name: server-14
+    environment:
+    - SERVER_ID=server-14
+    - SERVER_PORT=8000
+    ports:
+    - 8014:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-15:
+    build: ./server
+    container_name: server-15
+    environment:
+    - SERVER_ID=server-15
+    - SERVER_PORT=8000
+    ports:
+    - 8015:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-16:
+    build: ./server
+    container_name: server-16
+    environment:
+    - SERVER_ID=server-16
+    - SERVER_PORT=8000
+    ports:
+    - 8016:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-17:
+    build: ./server
+    container_name: server-17
+    environment:
+    - SERVER_ID=server-17
+    - SERVER_PORT=8000
+    ports:
+    - 8017:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-18:
+    build: ./server
+    container_name: server-18
+    environment:
+    - SERVER_ID=server-18
+    - SERVER_PORT=8000
+    ports:
+    - 8018:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-19:
+    build: ./server
+    container_name: server-19
+    environment:
+    - SERVER_ID=server-19
+    - SERVER_PORT=8000
+    ports:
+    - 8019:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-20:
+    build: ./server
+    container_name: server-20
+    environment:
+    - SERVER_ID=server-20
+    - SERVER_PORT=8000
+    ports:
+    - 8020:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-21:
+    build: ./server
+    container_name: server-21
+    environment:
+    - SERVER_ID=server-21
+    - SERVER_PORT=8000
+    ports:
+    - 8021:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-22:
+    build: ./server
+    container_name: server-22
+    environment:
+    - SERVER_ID=server-22
+    - SERVER_PORT=8000
+    ports:
+    - 8022:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-23:
+    build: ./server
+    container_name: server-23
+    environment:
+    - SERVER_ID=server-23
+    - SERVER_PORT=8000
+    ports:
+    - 8023:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-24:
+    build: ./server
+    container_name: server-24
+    environment:
+    - SERVER_ID=server-24
+    - SERVER_PORT=8000
+    ports:
+    - 8024:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-25:
+    build: ./server
+    container_name: server-25
+    environment:
+    - SERVER_ID=server-25
+    - SERVER_PORT=8000
+    ports:
+    - 8025:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-26:
+    build: ./server
+    container_name: server-26
+    environment:
+    - SERVER_ID=server-26
+    - SERVER_PORT=8000
+    ports:
+    - 8026:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-27:
+    build: ./server
+    container_name: server-27
+    environment:
+    - SERVER_ID=server-27
+    - SERVER_PORT=8000
+    ports:
+    - 8027:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-28:
+    build: ./server
+    container_name: server-28
+    environment:
+    - SERVER_ID=server-28
+    - SERVER_PORT=8000
+    ports:
+    - 8028:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-29:
+    build: ./server
+    container_name: server-29
+    environment:
+    - SERVER_ID=server-29
+    - SERVER_PORT=8000
+    ports:
+    - 8029:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-30:
+    build: ./server
+    container_name: server-30
+    environment:
+    - SERVER_ID=server-30
+    - SERVER_PORT=8000
+    ports:
+    - 8030:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-31:
+    build: ./server
+    container_name: server-31
+    environment:
+    - SERVER_ID=server-31
+    - SERVER_PORT=8000
+    ports:
+    - 8031:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-32:
+    build: ./server
+    container_name: server-32
+    environment:
+    - SERVER_ID=server-32
+    - SERVER_PORT=8000
+    ports:
+    - 8032:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-33:
+    build: ./server
+    container_name: server-33
+    environment:
+    - SERVER_ID=server-33
+    - SERVER_PORT=8000
+    ports:
+    - 8033:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-34:
+    build: ./server
+    container_name: server-34
+    environment:
+    - SERVER_ID=server-34
+    - SERVER_PORT=8000
+    ports:
+    - 8034:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-35:
+    build: ./server
+    container_name: server-35
+    environment:
+    - SERVER_ID=server-35
+    - SERVER_PORT=8000
+    ports:
+    - 8035:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-36:
+    build: ./server
+    container_name: server-36
+    environment:
+    - SERVER_ID=server-36
+    - SERVER_PORT=8000
+    ports:
+    - 8036:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-37:
+    build: ./server
+    container_name: server-37
+    environment:
+    - SERVER_ID=server-37
+    - SERVER_PORT=8000
+    ports:
+    - 8037:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-38:
+    build: ./server
+    container_name: server-38
+    environment:
+    - SERVER_ID=server-38
+    - SERVER_PORT=8000
+    ports:
+    - 8038:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-39:
+    build: ./server
+    container_name: server-39
+    environment:
+    - SERVER_ID=server-39
+    - SERVER_PORT=8000
+    ports:
+    - 8039:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-40:
+    build: ./server
+    container_name: server-40
+    environment:
+    - SERVER_ID=server-40
+    - SERVER_PORT=8000
+    ports:
+    - 8040:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-41:
+    build: ./server
+    container_name: server-41
+    environment:
+    - SERVER_ID=server-41
+    - SERVER_PORT=8000
+    ports:
+    - 8041:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-42:
+    build: ./server
+    container_name: server-42
+    environment:
+    - SERVER_ID=server-42
+    - SERVER_PORT=8000
+    ports:
+    - 8042:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-43:
+    build: ./server
+    container_name: server-43
+    environment:
+    - SERVER_ID=server-43
+    - SERVER_PORT=8000
+    ports:
+    - 8043:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-44:
+    build: ./server
+    container_name: server-44
+    environment:
+    - SERVER_ID=server-44
+    - SERVER_PORT=8000
+    ports:
+    - 8044:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-45:
+    build: ./server
+    container_name: server-45
+    environment:
+    - SERVER_ID=server-45
+    - SERVER_PORT=8000
+    ports:
+    - 8045:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-46:
+    build: ./server
+    container_name: server-46
+    environment:
+    - SERVER_ID=server-46
+    - SERVER_PORT=8000
+    ports:
+    - 8046:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-47:
+    build: ./server
+    container_name: server-47
+    environment:
+    - SERVER_ID=server-47
+    - SERVER_PORT=8000
+    ports:
+    - 8047:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-48:
+    build: ./server
+    container_name: server-48
+    environment:
+    - SERVER_ID=server-48
+    - SERVER_PORT=8000
+    ports:
+    - 8048:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-49:
+    build: ./server
+    container_name: server-49
+    environment:
+    - SERVER_ID=server-49
+    - SERVER_PORT=8000
+    ports:
+    - 8049:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+  server-50:
+    build: ./server
+    container_name: server-50
+    environment:
+    - SERVER_ID=server-50
+    - SERVER_PORT=8000
+    ports:
+    - 8050:8000
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+    networks:
+    - server-network
+    healthcheck:
+      test:
+      - CMD
+      - python
+      - -c
+      - import requests; requests.get('http://localhost:8000/health')
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+networks:
+  server-network:
+    driver: bridge
